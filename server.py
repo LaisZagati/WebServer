@@ -4,13 +4,13 @@ print(__name__)
 
 
 @app.route("/")
-def hello_world():
+def my_home():
     return render_template('index.html')
 
-@app.route("/about.html")
-def about():
-    return render_template('about.html')
+@app.route("/<string:page_name>")
+def html_page(page_name):
+    return render_template(page_name)
 
- 
+
 
 
